@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { tsNonNullExpression } from "@babel/types";
 
 export default function App() {
   //Create a counter
@@ -10,12 +11,15 @@ export default function App() {
     <div>
       <div>{count}</div>
       <button style={buttonStyle} onClick={() => setCount(++count)}>
-        Touch me
+        <b>Touch me</b>
       </button>
     </div>
   );
 }
 
 var buttonStyle = {
-  color: "blue"
+  color: "black",
+  border: "2px solid black",
+  padding: "10px",
+  background: "white"
 };
