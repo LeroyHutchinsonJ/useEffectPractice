@@ -1,15 +1,20 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { tsNonNullExpression } from "@babel/types";
 
 export default function App() {
   //Create a counter
 
   var [count, setCount] = useState(0);
 
+  useEffect(() => {
+    document.title = `You clicked count ${count} times`;
+  });
+
   return (
     <div>
-      <div>{count}</div>
+      <div>
+        <b>{count}</b>
+      </div>
       <button style={buttonStyle} onClick={() => setCount(++count)}>
         <b>Touch me</b>
       </button>
