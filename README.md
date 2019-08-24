@@ -1,2 +1,0 @@
-# useEffectPractice
-Created with CodeSandbox
